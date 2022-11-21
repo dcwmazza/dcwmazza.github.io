@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div align="left">
+        <span class="Verdana_preto_normal">
+          <script data-cfasync="false">
+            function calc(form) {
+              if (form.RepsPerformed.value < 10) {
+                form.OneRepMax.value = Math.round(
+                  form.WeightLifted.value /
+                    (1.0278 - 0.0278 * form.RepsPerformed.value)
+                );
+              }
+              if (form.RepsPerformed.value == 10) {
+                form.OneRepMax.value = Math.round(
+                  form.WeightLifted.value / 0.75
+                );
+              }
+              if (form.RepsPerformed.value > 10) {
+                alert("As repetições devem ficar entre 1 e 10");
+              }
+              form.A.value = Math.round(form.OneRepMax.value * 0.5);
+              form.B.value = Math.round(form.OneRepMax.value * 0.55);
+              form.C.value = Math.round(form.OneRepMax.value * 0.6);
+              form.D.value = Math.round(form.OneRepMax.value * 0.65);
+              form.E.value = Math.round(form.OneRepMax.value * 0.7);
+              form.F.value = Math.round(form.OneRepMax.value * 0.75);
+              form.G.value = Math.round(form.OneRepMax.value * 0.8);
+              form.H.value = Math.round(form.OneRepMax.value * 0.85);
+              form.I.value = Math.round(form.OneRepMax.value * 0.9);
+              form.J.value = Math.round(form.OneRepMax.value * 0.95);
+            }
+            //-->
+          </script>
+          <table
+            cellspacing="1"
+            cellpadding="0"
+            width="90%"
+            border="0"
+            align="center"
+          >
+            <tbody>
+              <tr bgcolor="#F5F5EB">
+                <td width="40%" rowspan="2">
+                  <p class="Verdana_preto_bold"></p>
+                  <h3>Carga levantada - Kg</h3>
+                  <p></p>
+                  <input
+                    name="WeightLifted"
+                    class="Verdana_preto_bold"
+                    size="5"
+                  />
+                  <span class="Verdana_preto_bold">
+                    <h3>Número de Repetições (de 1-10)</h3>
+                    <input
+                      name="RepsPerformed"
+                      class="Verdana_preto_bold"
+                      size="5"
+                    />
+                  </span>
+                  <p></p>
+                  <center>
+                    <p class="Verdana_preto_normal">
+                      <input
+                        onclick="calc(this.form)"
+                        type="button"
+                        value="Calcular"
+                        name="button"
+                        class="Verdana_preto_bold"
+                      />
+                      <input
+                        type="reset"
+                        value="Limpar"
+                        name="Reset"
+                        class="Verdana_preto_bold"
+                      />
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                      Preencha a <b>Carga levantada</b> e o
+                      <b>Número de repetições</b> e clique em
+                      <b>Calcular</b> para realizar o teste.
+                    </p>
+                  </center>
+                </td>
+                <td colspan="2" align="middle">
+                  <dl>
+                    <dt>
+                      <center class="pretobold">
+                        <p class="Verdana_preto_bold"></p>
+                        <h3>Resultado - 1 Repetição Máxima</h3>
+                        <p></p>
+                        <input
+                          name="OneRepMax"
+                          class="Verdana_preto_bold"
+                          size="5"
+                        />
+                        kg
+                        <p></p>
+                      </center>
+                    </dt>
+                  </dl>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  width="29%"
+                  height="2"
+                  bgcolor="#F5F5EB"
+                  class="Verdana_preto_normal"
+                >
+                  <div align="center">
+                    <dl>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="A" class="Verdana_preto_bold" size="5" />
+                          50% 1 RM
+                        </span>
+                      </dt>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="B" class="Verdana_preto_bold" size="5" />
+                          55% 1 RM
+                        </span>
+                      </dt>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="C" class="Verdana_preto_bold" size="5" />
+                          60% 1 RM
+                        </span>
+                      </dt>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="D" class="Verdana_preto_bold" size="5" />
+                          65% 1 RM
+                        </span>
+                      </dt>
+                      <dt class="Verdana_preto_normal">
+                        <input name="E" class="Verdana_preto_bold" size="5" />
+                        70% 1 RM
+                      </dt>
+                    </dl>
+                  </div>
+                </td>
+                <td
+                  width="31%"
+                  height="2"
+                  bgcolor="#F5F5EB"
+                  class="Verdana_preto_normal"
+                >
+                  <div align="center">
+                    <dl>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="F" class="Verdana_preto_bold" size="5" />
+                          75% 1 RM
+                        </span>
+                      </dt>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="G" class="Verdana_preto_bold" size="5" />
+                          80% 1 RM
+                        </span>
+                      </dt>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="H" class="Verdana_preto_bold" size="5" />
+                          85% 1 RM
+                        </span>
+                      </dt>
+                      <dt>
+                        <span class="Verdana_preto_normal">
+                          <input name="I" class="Verdana_preto_bold" size="5" />
+                          90% 1 RM
+                        </span>
+                      </dt>
+                      <dt class="Verdana_preto_normal">
+                        <input name="J" class="Verdana_preto_bold" size="5" />
+                        95% 1 RM
+                      </dt>
+                    </dl>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </span>
+      </div>
+    </form>
+  </body>
+</html>
